@@ -1,42 +1,82 @@
 
+OpenAI Codex CLI with SambaNova 🚀
 
-Installing and running Codex CLI
-Install globally with your preferred package manager:
+This repository demonstrates how to install and configure the OpenAI Codex CLI to run with SambaNova-hosted models.
 
-npm install -g @openai/codex  
-# Alternatively: `brew install codex`
-Then
+With just a few steps, you’ll be able to connect the Codex CLI to SambaNova’s API and run powerful open-source LLMs like Llama-4 Maverick directly from your terminal.
+.
 
-2️⃣ Create your config file
+📦 Installation
 
-Codex stores its config in:
+Install Codex CLI globally with your preferred package manager:
 
-%USERPROFILE%\.codex\config.toml
+npm install -g @openai/codex
 
-Open it in Notepad:
+Or with Homebrew:
+brew install codex
+
+⚙️ Step 2: Create Your Config File
+
+Codex stores its configuration in:
+
+Windows: %USERPROFILE%\.codex\config.toml
+
+macOS/Linux: $HOME/.codex/config.toml
+
+Open it in your editor, e.g., Notepad on Windows:
 
 notepad %USERPROFILE%\.codex\config.toml
+
+Paste the following configuration:
 
 disable_response_storage = true
 show_reasoning_content   = true
 
 [model_providers.sambanova]
-name    = "sambanova"
+name     = "sambanova"
 base_url = "https://api.sambanova.ai/v1"
-env_key = "SAMBANOVA_API_KEY"
+env_key  = "SAMBANOVA_API_KEY"
 
 [profiles.oss]
 model_provider = "sambanova"
 model = "Llama-4-Maverick-17B-128E-Instruct"
 
 
-setx SAMBANOVA_API_KEY "YOUR_KEY_HERE" step 3 
+🔑 Step 3: Set Your API Key
+
+Set your SambaNova API key as an environment variable:
+
+setx SAMBANOVA_API_KEY "YOUR_KEY_HERE"   # Windows
+export SAMBANOVA_API_KEY="YOUR_KEY_HERE" # macOS/Linux
 
 
-Step 4: Run it:
+▶️ Step 4: Run Codex
+
+Now, run Codex with your new profile:
 codex --profile oss
-/status 
-and you should see Provider: Sambanova ✅
+
+Check the connection status:
+/status
+
+you should see:
+Provider: Sambanova ✅
+
+✅ You’re Ready!
+
+You can now start using Codex CLI with SambaNova to:
+
+Run inference directly from your terminal
+
+Access enterprise-grade Llama models
+
+Automate workflows with open-source AI
+
+
+
+
+
+
+
 
 
 
