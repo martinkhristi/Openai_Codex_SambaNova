@@ -45,8 +45,9 @@ model = "Llama-4-Maverick-17B-128E-Instruct"
 🔑 Step 3: Set Your API Key
 
 Set your SambaNova API key as an environment variable:
+get your free API key at https://sambanova.ai/
 
-setx SAMBANOVA_API_KEY "YOUR_KEY_HERE"   # Windows
+setx SAMBANOVA_API_KEY "YOUR_KEY_HERE"   # Windows  
 export SAMBANOVA_API_KEY="YOUR_KEY_HERE" # macOS/Linux
 
 
@@ -70,6 +71,7 @@ Run inference directly from your terminal
 Access enterprise-grade Llama models
 
 Automate workflows with open-source AI
+
 
 
 
